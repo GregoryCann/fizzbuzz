@@ -1,0 +1,48 @@
+{
+    "name": "fizzbuzz",
+    "version": "1.0.0",
+    "description": "a simple fizzbuzz example",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "jest",
+        "prettify": "pretty-quick"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged",
+            "pre-push": "npm run type:check"
+        }
+    },
+    "jest": {
+        "roots": [
+            "<rootDir>/tests"
+        ],
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "moduleNameMapper": {
+            "~shared(.*)$": "<rootDir>/src/client/shared$1",
+            "~src(.*)$": "<rootDir>/src$1"
+        }
+    },
+    "keywords": [
+        "fizzbuzz"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^24.0.23",
+        "@types/styled-components": "^4.4.0",
+        "@typescript-eslint/eslint-plugin": "^2.7.0",
+        "@typescript-eslint/parser": "^2.7.0",
+        "file-loader": "^4.3.0",
+        "husky": "^4.2.3",
+        "jest": "24.9.0",
+        "prettier": "^1.19.1",
+        "pretty-quick": "^2.0.1",
+        "ts-jest": "24.1.0",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.2"
+    }
+}

@@ -12,6 +12,9 @@ const convert = (number: number):string => {
   if (isDivisibleBy(42, number)) 
       return 'Answer to the Ultimate Question of Life, the Universe, and Everything';
   
+  if (isDivisibleBy(42, number)) 
+  return 'Answer to the Ultimate Question of Life, the Universe, and Everything';
+
   if (isDivisibleBy(FizzFactor, number) && isDivisibleBy(BuzzFactor,number)) 
       return `${Fizz}${Buzz}`;
   
